@@ -28,7 +28,7 @@ class Student
     INSERT INTO students (name, grade)
     Values (@name, @grade)
     SQL
-    id = "SELECT id FROM students ORDER BY id DESC LIMIT 1"
+    id = "SELECT * FROM students ORDER BY id DESC LIMIT 1"
     DB[:conn].execute(sql)
     @id = DB[:conn].execute(id)[0][0]
   end
