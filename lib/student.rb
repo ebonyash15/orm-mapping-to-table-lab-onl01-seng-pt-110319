@@ -26,7 +26,7 @@ class Student
   def save
     sql = <<-SQL
     INSERT INTO students (name, grade)
-    Values (@name, @grade)
+    Values (self.name, self.grade)
     SQL
     id = "SELECT id FROM students ORDER BY id DESC LIMIT 1"
     DB[:conn].execute(sql)
