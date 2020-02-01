@@ -43,5 +43,6 @@ class Student
     s = Student.new(hash[:name], hash[:grade])
     Student.save
     s.save
+    s
   end
 end
