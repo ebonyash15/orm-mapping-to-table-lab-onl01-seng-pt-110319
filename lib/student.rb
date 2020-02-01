@@ -34,8 +34,8 @@ class Student
     #grab the ID of the last inserted row  assign it to the be the value of the @id attribute of the instance
   end
   def self.create( :name, :grade)
-    # instantiate a new Student object with Student.new(name, grade) and 2) save 
-    #that new student object via student.save. The #create method should return 
+    # instantiate a new Student object with Student.new(name, grade) and 2) save
+    #that new student object via student.save. The #create method should return
     #the student object that it creates
   end
 end
