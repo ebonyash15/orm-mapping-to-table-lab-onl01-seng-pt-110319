@@ -31,7 +31,7 @@ class Student
     id = "SELECT id FROM students ORDER BY id DESC LIMIT 1"
     DB[:conn].execute(sql)
     id_a = DB[:conn].execute(id)
-    @id=id_a.flatten
+    @id=id_a.flatten[0]
   end
 
   def self.create(name:, grade:)
