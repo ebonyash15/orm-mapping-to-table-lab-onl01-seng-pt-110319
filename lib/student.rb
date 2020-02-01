@@ -27,10 +27,15 @@ class Student
     #sql=SQLstmt to remove table
     self.execute
   end
-  def savesheets
-    # save the data concerning an individual student object to the database
+  def save
+    # saves the attributes describing a given student to the students table in our database
+    # sql=SQL statement that will INSERT the correct data into the table
+    #bound paremeters to pass the given student's name and grade into the SQL statement
+    #grab the ID of the last inserted row  assign it to the be the value of the @id attribute of the instance
   end
-  def create
-    self.save
+  def self.create( :name, :grade)
+    # instantiate a new Student object with Student.new(name, grade) and 2) save 
+    #that new student object via student.save. The #create method should return 
+    #the student object that it creates
   end
 end
