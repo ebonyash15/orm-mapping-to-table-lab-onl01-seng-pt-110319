@@ -1,7 +1,6 @@
 require 'bundler'
 Bundler.require
 require 'sqlite3'
-require_relative '../lib/song.rb'
 
 require_relative '../lib/student.rb'
 
