@@ -37,7 +37,7 @@ class Student
     sql = @id
   end
 
-  def self.create( :name, :grade)
+  def self.create(name:, grade:)
     Student.new(name, grade)
     Student.save
   end
