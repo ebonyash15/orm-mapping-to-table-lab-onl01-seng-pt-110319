@@ -27,8 +27,8 @@ class Student
     sql = <<-SQL
     INSERT INTO students (name, grade)
     Values (@name, @grade)
-    SELECT id FROM students ORDER BY id DESC LIMIT 1
     SQL
+    @id = "SELECT id FROM students ORDER BY id DESC LIMIT 1"
   end
 
   def self.create(name:, grade:)
