@@ -39,8 +39,8 @@ class Student
     @id=id_a.flatten[0]
   end
 
-  def self.create(name:, grade:)
-    Student.new(:name, :grade)
+  def self.create(hash)
+    Student.new(hash[:name], hash[:grade])
     Student.save
   end
 end
