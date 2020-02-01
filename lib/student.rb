@@ -29,7 +29,7 @@ class Student
     Values (@name, @grade)
     SELECT id FROM students ORDER BY id DESC LIMIT 1
     SQL
-    sql = @id
+    @id = sql
   end
 
   def self.create(name:, grade:)
