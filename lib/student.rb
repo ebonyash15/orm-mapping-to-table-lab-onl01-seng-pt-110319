@@ -28,9 +28,10 @@ class Student
     INSERT INTO students (name, grade)
     Values (@name, @grade)
     SQL
-    id = "SELECT * FROM students ORDER BY id DESC LIMIT 1"
+    id = "SELECT id FROM students ORDER BY id DESC LIMIT 1"
     DB[:conn].execute(sql)
-    @id = DB[:conn].execute(id)
+    id_a = DB[:conn].execute(id)
+    @id=id_a.flatten
   end
 
   def self.create(name:, grade:)
